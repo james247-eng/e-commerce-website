@@ -1,0 +1,728 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+.container{
+    position: sticky;
+    top: 0;
+    right: 0;
+    z-index: 100;
+}
+.anouncement{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background-color: teal;
+    color: white;
+    padding: 10px;
+   
+}
+nav{
+    padding: 10px;
+    background-color: aliceblue;
+   
+}
+
+.navtop{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.logo::first-letter{
+    color: red;
+    font-size: xx-large;
+    font-style: italic;
+    margin-right: 1px;
+    text-decoration: line-through;
+}
+.fa-globe{
+    color: red;
+    /*animation: fadeInUp 1s ease-out forwards;*/
+    animation: spin 2s linear infinite;
+}
+@keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+.navtop input{
+    background-color: grey;
+    width: 230px;
+    border-radius: 7px;
+    border: none;
+    color: white;
+    padding: 7px;
+}
+
+.navtop input::placeholder{
+    color: white;
+    font-size: medium;
+}
+
+.cart-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.fa-shopping-bag{
+    font-size: 35px;
+}
+
+.cart{
+    color: white;
+    position: absolute;
+    top: 40%;
+}
+
+.navbottom{
+    display: flex;
+    justify-content: center;
+}
+
+.nav-links{
+    color: rgb(44, 43, 43);
+    margin-right: 40px;
+    cursor: pointer;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+/* ======================= styles for the slider-container =====================*/
+
+.slider-container{
+    background-image: url("images/sneakers/background/wallpeper2.jpeg");
+    background-position: center;
+    background-size: cover;
+    height: 90vh;
+    background-repeat: no-repeat;
+    color: white;
+    overflow: hidden;
+}
+
+.brand-wrapper{
+    width: 500vw;
+    height: 100%;
+    display: flex;
+    transition: 1s ease;
+}
+
+.brand{
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100vw;
+    height: 100%;
+}
+
+.brand-img{
+    position: absolute;
+    left: 5%;
+    z-index: 2;
+}
+
+.brand-bg{
+    width: 450px;
+    height: 450px;
+    background-color: darkred;
+    border-radius: 50%;
+    position: absolute;
+
+}
+
+.info{
+    width: 300px;
+    border-radius: 10px;
+    position: absolute;
+    top: 10%;
+    right:10%;
+    padding: 10px;
+    border: 1px solid grey;
+    backdrop-filter: blur(10px);
+    border-top: 5px solid black;
+}
+
+.info .header{
+    margin-bottom: 5px;
+    font-size: large;
+}
+
+.slogan{
+    position:absolute;
+    top: 40%;
+    right: 20%;
+}
+
+
+.shop-now-btn{
+    position:absolute;
+    top: 50%;
+    right: 10%;
+    background-color: darkred;
+    color: white;
+    font-weight: 300;
+    border-radius: 6px;
+    border: none;
+    padding: 9px;
+    width: 150px;
+}
+
+.shop-now-btn:hover{
+    background-color: white;
+    color: darkred;
+    transition: all 0.4s ease;
+}
+
+.brand:nth-child(2) .brand-bg{
+    background-color: blue;
+}
+.brand:nth-child(2) .shop-now-btn{
+    background-color: blue;
+    color: white;
+}
+.brand:nth-child(2) .shop-now-btn:hover{
+    background-color: white;
+    color: blue;
+}
+.brand:nth-child(3) .brand-bg{
+    background-color:greenyellow;
+}
+.brand:nth-child(3) .shop-now-btn{
+    background-color: greenyellow;
+    color: black;
+}
+.brand:nth-child(3) .shop-now-btn:hover{
+    background-color: black;
+    color: greenyellow;
+}
+.brand:nth-child(4) .brand-bg{
+    background-color:blueviolet;
+}
+.brand:nth-child(4) .shop-now-btn{
+    background-color: blueviolet;
+    color: white;
+}
+.brand:nth-child(4) .shop-now-btn:hover{
+    background-color: white;
+    color: blueviolet;
+}
+.brand:nth-child(2) .brand-img{
+    transform: rotateY(180deg);
+}
+.brand:nth-child(5) .brand-bg{
+    background-color: cadetblue;
+}
+.brand:nth-child(5) .shop-now-btn{
+    background-color: cadetblue;
+    color: black;
+}
+.brand:nth-child(5) .shop-now-btn:hover{
+    background-color:black;
+    color: cadetblue;
+}
+
+
+/* ================== styles for the features-container ==================== */
+
+.features-container{
+    display: grid;
+    grid-template-columns: repeat(4, 230px);
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+.f-card{
+    position:relative;
+    border-radius: 10px;
+    border: 1px solid grey;
+    height: 230px;
+}
+
+.f-card img{
+    width: 100%;
+    height: 100%;
+}
+
+.cover-card{
+    background-color: rgba(0, 0, 0, 0.791);
+    color: white;
+    align-content: center;
+    text-align: center;
+    height: 0%;
+    width: 100%;
+    top: 0;
+    border-radius: 10px;
+    position: absolute;
+}
+
+.cover-card .header{
+    margin-bottom: 7px;
+    font-size: large;
+    display: none;
+}
+
+.cover-card h5{
+    display: none;
+}
+.f-card:hover{
+    box-shadow:  2px 2px 9px grey;
+}
+
+.f-card:hover .cover-card{
+    height: 100%;
+    transition: 1s ease;
+}
+
+.f-card:hover .cover-card .header{
+    display: block;
+}
+.f-card:hover .cover-card h5{
+    display: block;
+}
+
+/* ===================== STYLES FOR THE banner-container =================*/
+
+.banner-container{
+    width: 100vw;
+    height: 300px;
+    position: relative;
+    background-image: url("images/sneakers/puma/puma banner.png");
+}
+.banner{
+    width: 100%;
+    height: 100%;
+}
+
+.text{
+    top: 10%;
+    left: 30%;
+    position: absolute;
+    width: fit-content;
+}
+.red{
+    color: red;
+    font-size: xx-large;
+}
+
+/* ================== shop-container */
+.shop-slide-container{
+    height: 30px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    align-items: center;
+}
+.shop-slider-button{
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    padding: 5px;
+    border-radius: 10px;
+    margin: 20px;
+    cursor: pointer;
+    scale: (1.1);
+    border: 1px solid aliceblue;
+}
+
+.shop-slider-button:active{
+    background-color: aliceblue;
+    border: 1px solid black;
+}
+.shop-slider-button:hover{
+    background-color:  grey;
+
+}
+/* shop-banner-wrapper*/
+
+.shop-banner-wrapper{
+    height: 400px;
+    background-color: aliceblue;
+    overflow: hidden;
+}
+
+.inner-wrapper{
+    display: flex;
+    width: 500vw;
+    height: 100%;
+    transition: 1s ease;
+}
+
+.shop-ba-img{
+    width: 100vw;
+    height: 100%;
+}
+
+
+/* ================ main shop ================*/
+
+.shop-banner-wrapper, .mainshop-container{
+    background-color: rgb(241, 234, 234);
+    overflow: hidden;
+}
+
+.shop-inner-wrapper{
+    width: 500vw;
+    display: flex;
+    transition: 1.4s ease;
+}
+.shop{
+    display: grid;
+    grid-template-columns: repeat(5, 190px);
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+    width: 100vw;
+}
+
+.product-card{
+    border-radius: 6px;
+    background-color: white;
+    height: fit-content;
+    border: 1px solid gray;
+    margin: 10px;
+}
+
+.product-card img{
+    width: 100%;
+    height: 170px;
+    border-radius:6px 6px 0px 0px  ;
+}
+
+.price{
+    background-color: black;
+    width: fit-content;
+    color: white;
+    padding: 3px;
+    border-radius: 0px 6px 6px 0px;
+    text-align: center;
+}
+
+.name, .description{
+    text-align: center;
+    color: grey;
+}
+
+.button-quan{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.fa-cart-plus{
+    font-size: 20px;
+    color: green;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.quantity{
+    background-color: black;
+    padding: 4px;
+    border-radius: 50%;
+    color: white;
+    width: 10px;
+    height: 10px;
+    text-align: center;
+    display: flex;align-items: center;
+    justify-content: center;
+}
+.fa-cart-plus, .quantity{
+    visibility: hidden;
+}
+
+.product-card:hover .fa-cart-plus{
+    visibility: visible;
+}
+
+.product-card:hover .quantity{
+    visibility: visible;
+}
+
+/* ====================== footer =============*/
+
+footer{
+    background-color: aliceblue;
+    padding: 20px;
+}
+
+.footer-container{
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+.footer-card{
+    width: 300px;
+    border-radius: 10px;
+
+    padding: 10px;
+    height: fit-content;
+}
+
+.footer-card h4{
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.footer-card h5{
+    color: rgb(31, 29, 29);
+    margin-bottom: 7px;
+}
+.form{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    align-items: center;
+    text-align: center;
+}
+
+.form input{
+    background-color: gray;
+    color: white;
+    border: none;
+    border-radius: 7px 0px 0px 7px ;
+    padding: 4px;
+    width: 80%;
+
+}
+.form input::placeholder{
+    color: white;
+}
+
+.email-btn{
+    width: 20%;
+    background-color: green;
+    color: white;
+    padding: 4px;
+    border-radius: 0px 7px 7px 0px;
+    border: none;
+    cursor: pointer;
+}
+.fa-brands{
+    font-size: 25px;
+    cursor: pointer;
+    margin-right: 10px;
+    color: blue;
+}
+
+.copy-right{
+    text-align: center;
+    color: grey;
+    font-family: sans-serif;
+}
+.form-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.form{
+    width: 300px;
+    left: 30%;
+}
+@media(max-width:412px){
+    nav{
+        padding: 0;
+    }
+    .logo{
+        margin-left: 0;
+        font-size: medium;
+    }
+    .navbottom{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 30px;
+        padding-bottom: 30px;
+    }
+    .nav-links{
+        margin-right: 20px;
+    }
+    .slider-container{
+        height: 50vh;
+    }
+
+    .brand-wrapper{
+        height: 100%;
+    }
+    .brand{
+        height: 100%;
+    }
+    .brand-img{
+        width: 300px;
+    }
+    .brand-bg{
+        left: 5%;
+        width: 200px;
+        height: 200px;
+    }
+
+    .info{
+        top: 5%;
+    }
+    .slogan{
+        left: 30%;
+        top: 75%;
+    }
+
+    .shop-now-btn{
+        right: 30%;
+        top: 85%;
+        margin-left: 300px;
+    }
+
+    .features-container{
+        display: grid;
+        grid-template-columns: repeat(2,150px);
+        align-items: center;
+        justify-content: center;
+        background-color: lightgrey;
+    }
+    .f-card{
+        background-color: white;
+        height: 150px;
+    }
+
+    .shop-banner-wrapper{
+        height: 200px;
+    }
+    .text{
+        left: 5%;
+    }
+    .shop{
+        display: grid;
+        padding: 10px;
+        gap: 10px;
+        grid-template-columns: repeat(2, 180px);
+    }
+    .quantity, .fa-cart-plus{
+        visibility: visible;
+    }
+    .footer-card{
+        width: 200px;
+        border: none;
+        position: relative;
+    }
+    .form-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .form{
+        width: 300px;
+        left: 30%;
+    }
+}
+@media(max-width:360px){
+    .text{
+        left: 5%;
+    }
+    nav{
+        padding: 0;
+    }
+    .logo{
+        width: 50px;
+        margin-left: 0;
+    }
+    .navbottom{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .nav-links{
+        margin-right: 20px;
+    }
+    .slider-container{
+        height: 50vh;
+    }
+
+    .brand-wrapper{
+        height: 100%;
+    }
+    .brand{
+        height: 100%;
+    }
+    .brand-img{
+        width: 300px;
+    }
+    .brand-bg{
+        width: 200px;
+        height: 200px;
+    }
+
+    .info{
+        top: 5%;
+    }
+    .slogan{
+        left: 30%;
+        top: 75%;
+    }
+
+    .shop-now-btn{
+        right: 30%;
+        top: 85%;
+        margin-left: 300px;
+    }
+
+    .features-container{
+        display: grid;
+        grid-template-columns: repeat(2,150px);
+        align-items: center;
+        justify-content: center;
+        background-color: lightgrey;
+    }
+    .f-card{
+        background-color: white;
+        height: 150px;
+    }
+
+    .shop-banner-wrapper{
+        height: 200px;
+    }
+
+    .shop{
+        display: grid;
+        padding: 10px;
+        gap: 10px;
+        grid-template-columns: repeat(2, 180px);
+    }
+    .quantity, .fa-cart-plus{
+        visibility: visible;
+    }
+    .footer-card{
+        width: 200px;
+        border: none;
+        position: relative;
+    }
+    .form-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .form{
+        width: 300px;
+        left: 30%;
+    }
+}

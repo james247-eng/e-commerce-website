@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>cart</title>
+    <link rel="stylesheet" href="cart.css">
+    <link rel="icon" type="image/png" href="images/faveicon.png" />
+
+</head>
+<body> 
+    <!-- ========================= announcement =============-->
+     <div class="container">
+
+        <div class="anouncement">
+        <h3> Super Deal! <span style="color: red; font-style: italic ;">free</span> Shipping On Orders above $100</h3>
+     </div>
+        <nav>
+            <div class="navtop">
+                <a href="index.html">
+                    <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                </a>
+                <input type="search" placeholder="Search.......">
+                <div class="cart-wrapper">
+                    <h5 class="cart" id="cart">0</h5>
+                    <!-- cart icon here-->
+                    <a href="cart.html">
+                        <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="navbottom">
+                <h3 class="nav-links">NIKE</h3>
+                <h3 class="nav-links">BLINKS</h3>
+                <h3 class="nav-links">ADIDAS</h3>
+                <h3 class="nav-links">HIPPIE</h3>
+                <h3 class="nav-links">PUMA</h3>
+            </div>
+        </nav>
+    </div>
+    <!-- ====== empty cart message=======-->
+     <div class="empty-cart-message" id="empty-cart-message"></div>
+     <!-- ============== cart contents ===========-->
+     <div class="cart-contents" id="cart-contents"></div>
+
+     <script src="database.js"></script>
+     <script src="cart.js"></script>
+</body>
+</html>
