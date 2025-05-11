@@ -565,6 +565,79 @@ footer{
 }
 
 @media (max-width:6.5in){
+    .fa-bars{
+        visibility: visible;
+    }
+    .fa-times{
+    visibility: hidden;
+}
+    .text{
+        left: 5%;
+    }
+    nav{
+        padding: 0;
+    }
+    .logo{
+        margin-left: 10px;
+       
+    }
+     .fa-globe{
+        font-size: 20px;
+     }
+     .navtop input{
+        width: 200px;
+     }
+     .cart-wrapper{
+        margin-right: 5px;
+     }
+     .info{
+        display: none;
+     }
+
+    .navbottom{
+        display: block;
+        position: absolute;
+        background-color: rgba(240, 248, 255, 0.687);
+        margin-top: 0;
+        width: 200px;
+        padding-left: 20px;
+        border-radius: 0px 0px 10px;
+        backdrop-filter: blur(5px);
+        visibility: hidden;
+    }
+    .nav-links{
+        margin-right: 20px;
+        margin-top: 20px;
+    }
+    .nav-links:hover{
+        background-color: rgb(112, 97, 97);
+        color: aliceblue;
+        padding-left: 10px;
+        border-radius: 5px;
+    }
+    .slider-container{
+        height: 50vh;
+    }
+
+    .brand-wrapper{
+        height: 100%;
+    }
+    .brand{
+        height: 100%;
+    }
+    .brand-img{
+        width: 300px;
+    }
+    .brand-bg{
+        width: 200px;
+        height: 200px;
+    }
+    .input-container{
+        width: 200px;
+    }
+    .info{
+        top: 5%;
+    }
     nav{
         padding: 0;
     }
