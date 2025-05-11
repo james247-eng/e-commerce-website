@@ -1,5 +1,5 @@
-// sliding function
 
+// sliding function
 const brand_wrapper = document.querySelector(".brand-wrapper");
 const inner_wrapper = document.querySelector(".inner-wrapper");
 const shop_inner_wrapper = document.querySelector(".shop-inner-wrapper");
@@ -193,3 +193,17 @@ const cart_update=()=>{
 
 cart_update();
 
+// togle nav bar functionality
+const show_menu_btn = document.querySelector(".fa-bars");
+const hide_menu_btn = document.querySelector(".fa-times");
+const navbottom = document.querySelector(".navbottom");
+const show_menu = ()=>{
+   navbottom.style.visibility = "visible";
+   show_menu_btn.style.display = 'none';
+   hide_menu_btn.style.visibility ='visible';
+}
+const hide_menu = ()=>{
+   navbottom.style.visibility = "hidden";
+   hide_menu_btn.style.visibility ='hidden';
+   show_menu_btn.style.display = 'block';
+}

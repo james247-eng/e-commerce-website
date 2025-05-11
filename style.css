@@ -26,6 +26,11 @@ html{
     padding: 10px;
    
 }
+.shipping-discount{
+    text-decoration: underline;
+    text-decoration-color: red;
+    text-decoration-thickness: 2px;
+}
 nav{
     padding: 10px;
     background-color: aliceblue;
@@ -50,30 +55,33 @@ nav{
     margin-right: 1px;
     text-decoration: line-through;
 }
-.fa-globe{
-    color: red;
-    /*animation: fadeInUp 1s ease-out forwards;*/
-    animation: spin 2s linear infinite;
+.input-container{
+    width: 300px;
+    background-color: grey;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 7px;
 }
-@keyframes spin {
-    to {
-      transform: rotate(360deg);
-    }
-  }
-.navtop input{
+.fa-search{
+    color: white;
+    margin-right: 10px;
+}
+.navtop .input-container input{
     background-color: grey;
     width: 230px;
     border-radius: 7px;
     border: none;
     color: white;
     padding: 7px;
+    outline: none;
+    border: none;
 }
 
-.navtop input::placeholder{
+.navtop .input-container input::placeholder{
     color: white;
     font-size: medium;
 }
-
 .cart-wrapper{
     display: flex;
     flex-direction: column;
@@ -82,30 +90,43 @@ nav{
     margin-right: 20px;
     cursor: pointer;
 }
-
-.fa-shopping-bag{
-    font-size: 35px;
+.cart-icon{
+    width: 35px;
 }
-
+/*.fa-shopping-bag{
+    font-size: 35px;
+}*/
 .cart{
     color: white;
     position: absolute;
-    top: 40%;
-}
+    background-color: red;
+    border-radius: 50%;
+    padding: 5px;
+    top: -10%;
+    right: 0%;
+    height: 8px;
+    width: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+}
+.fa-bars, .fa-times{
+    z-index: 777;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-bottom: 0px;
+    cursor: pointer;
+    visibility: hidden;
+}
 .navbottom{
     display: flex;
     justify-content: center;
 }
-
 .nav-links{
-    color: rgb(44, 43, 43);
     margin-right: 40px;
-    cursor: pointer;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(69, 67, 67);
 }
-
-
 /* ======================= styles for the slider-container =====================*/
 
 .slider-container{
@@ -542,7 +563,8 @@ footer{
     width: 300px;
     left: 30%;
 }
-@media(max-width:412px){
+
+@media (max-width:6.5in){
     nav{
         padding: 0;
     }
@@ -614,7 +636,7 @@ footer{
         display: grid;
         padding: 10px;
         gap: 10px;
-        grid-template-columns: repeat(2, 180px);
+        grid-template-columns: repeat(2, 170px);
     }
     .quantity, .fa-cart-plus{
         visibility: visible;
@@ -635,7 +657,14 @@ footer{
         left: 30%;
     }
 }
-@media(max-width:360px){
+
+@media(max-width:344px){
+    .fa-bars{
+        visibility: visible;
+    }
+    .fa-times{
+    visibility: hidden;
+}
     .text{
         left: 5%;
     }
@@ -643,15 +672,42 @@ footer{
         padding: 0;
     }
     .logo{
-        width: 50px;
-        margin-left: 0;
+        margin-left: 10px;
+       
     }
+     .fa-globe{
+        font-size: 20px;
+     }
+     .navtop input{
+        width: 200px;
+     }
+     .cart-wrapper{
+        margin-right: 5px;
+     }
+     .info{
+        display: none;
+     }
+
     .navbottom{
-        display: flex;
-        flex-wrap: wrap;
+        display: block;
+        position: absolute;
+        background-color: rgba(240, 248, 255, 0.687);
+        margin-top: 0;
+        width: 200px;
+        padding-left: 20px;
+        border-radius: 0px 0px 10px;
+        backdrop-filter: blur(5px);
+        visibility: hidden;
     }
     .nav-links{
         margin-right: 20px;
+        margin-top: 20px;
+    }
+    .nav-links:hover{
+        background-color: rgb(112, 97, 97);
+        color: aliceblue;
+        padding-left: 10px;
+        border-radius: 5px;
     }
     .slider-container{
         height: 50vh;
@@ -670,7 +726,9 @@ footer{
         width: 200px;
         height: 200px;
     }
-
+    .input-container{
+        width: 200px;
+    }
     .info{
         top: 5%;
     }
@@ -705,7 +763,7 @@ footer{
         display: grid;
         padding: 10px;
         gap: 10px;
-        grid-template-columns: repeat(2, 180px);
+        grid-template-columns: repeat(1, 250px);
     }
     .quantity, .fa-cart-plus{
         visibility: visible;

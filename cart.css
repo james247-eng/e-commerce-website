@@ -48,9 +48,9 @@ nav{
     cursor: pointer;
 }
 .fa-arrow-left{
-    color:  black;
-    font-size: xx-large;
-    margin-left: 40px;
+    color:  grey;
+    font-size: x-large;
+    margin-left: 20px;
     
 }
 .navtop input{
@@ -75,30 +75,35 @@ nav{
     margin-right: 20px;
     cursor: pointer;
 }
-
-.fa-shopping-bag{
-    font-size: 35px;
+.cart-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-right: 20px;
+    cursor: pointer;
 }
-
+.cart-icon{
+    width: 35px;
+}
+/*.fa-shopping-bag{
+    font-size: 35px;
+}*/
 .cart{
     color: white;
     position: absolute;
-    top: 40%;
-}
-
-
-.navbottom{
+    background-color: red;
+    border-radius: 50%;
+    padding: 5px;
+    top: -10%;
+    right: 0%;
+    height: 8px;
+    width: 8px;
     display: flex;
+    align-items: center;
     justify-content: center;
-}
 
-.nav-links{
-    color: rgb(44, 43, 43);
-    margin-right: 40px;
-    cursor: pointer;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-
 
 .fa-square-minus{
     font-size:26px;
@@ -129,9 +134,8 @@ nav{
     border-radius: 7px;
     width: 140px;
 }
-
 .clear-cart{
-    background-color: red;
+    background-color: rgb(128, 2, 2);
     margin-left: 6px;
     color: white;
     padding: 10px;
@@ -140,7 +144,10 @@ nav{
     border-radius: 7px;
     width: 140px;
 }
-
+.clear-cart:hover{
+    background-color: hsl(0, 88%, 59%);
+    color: grey;
+}
 @media(max-width:412px){
     .fa-arrow-left{
         color:  black;

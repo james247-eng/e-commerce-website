@@ -4,49 +4,48 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
     <!-- SEO Tags -->
     <meta name="description" content="Buy high-quality sneakers from top brands at the best prices.">
     <meta name="keywords" content="sneakers, Nike, Adidas, Puma, online shopping, e-commerce">
-    <meta name="author" content="Your Name">
-  
+    <meta name="author" content="James ojoagefu daniel">
     <!-- Open Graph for Facebook -->
     <meta property="og:title" content="Online Sneaker Store">
     <meta property="og:description" content="Shop for trending sneakers with great deals.">
     <meta property="og:image" content="images/sneaker-banner.jpg">
-    <meta property="og:url" content="https://yourwebsite.com">
-
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
-
+    <meta property="og:url" content="https://james247-eng.github.io/e-commerce-website/">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/faveicon.png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Stylesheets -->
     <link rel="stylesheet" href="style.css" />
-  
     <title>Alphas sneakers</title>
   </head>
 <body> 
     <div class="container">
-
         <!-- ========================= announcement =============-->
         <div class="anouncement">
-        <h3> Super Deal! <span style="color: red; font-style: italic ;">free</span> Shipping On Orders above $100</h3>
+        <h5> Super Deal! <span style="color: red; font-style: italic ;">free</span> Shipping On Orders above <span class="shipping-discount">$100</span></h5>
         </div>
     <!-- nav section -->
         <nav>
             <div class="navtop">
-                <a href="index.html"><h2 class="logo">ALPHAS <i class="fa fa-globe" aria-hidden="true"></i></h2></a>
-                <input type="search" placeholder="Search.......">
-                <a href="cart.html">
+                <a href="index.html"><h2 class="logo">ALPHA<span style="color: red;">'</span>S</h2></a>
+                    <div class="input-container">
+                        <input type="text" placeholder="Search.......">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </div>
+                    <a href="cart.html">
                     <div class="cart-wrapper">
                         <h5 class="cart" id="cart">0</h5>
                         <!-- cart icon here-->
-                        <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                        <img src="images/cart-removebg-preview (1).png" alt="" class="cart-icon">
                     </div>
                 </a>
             </div>
+            <i class="fa fa-bars" id="show_menu_btn" aria-hidden="true" onclick="show_menu()" ></i>
+            <i class="fa fa-times" id="hide_menu_btn" aria-hidden="true" onclick="hide_menu()"></i>
             <div class="navbottom">
                 <h3 class="nav-links">NIKE</h3>
                 <h3 class="nav-links">BLINKS</h3>
